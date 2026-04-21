@@ -1,0 +1,180 @@
+body {
+    background-color: #0a0a0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.soat, .timer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+    filter: drop-shadow(0 0 15px rgba(118, 75, 162, 0.4));
+    margin-bottom: 30px;
+    min-height: 180px;
+    display: none;
+}
+
+.soat.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.timer.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.time-display {
+    min-width: 400px;
+    text-align: center;
+}
+
+.sw-ms {
+    font-size: 3.5rem;
+    display: inline-block;
+    width: 70px;
+}
+
+.sw-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Sekundomer Start/Pauza tugmasi */
+.btn-sw-main {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-sw-main:active {
+    transform: scale(0.95);
+}
+
+/* Sekundomer O'chirish tugmasi */
+.btn-sw-reset {
+    background: rgba(255, 69, 58, 0.1);
+    border: 1px solid rgba(255, 69, 58, 0.3);
+    color: #ff453a;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1rem;
+    display: none; /* JS orqali .active qo'shilganda chiqadi */
+}
+
+.btn-sw-reset.active {
+    display: block;
+}
+
+.btn-sw-reset:active {
+    transform: scale(0.95);
+}
+
+/* Pastki Soat tugmasi */
+.btn-soat {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-soat.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.btn-soat:active {
+    transform: scale(0.95);
+}
+
+/* Pastki Sekundomer tugmasi */
+.btn-timer {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-timer.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.btn-timer:active {
+    transform: scale(0.95);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+
+
+.footer {
+    position: fixed;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
+.footer .brand {
+    color: #fff;
+    opacity: 0.7;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer .brand:hover {
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(118, 75, 162, 0.8);
+}

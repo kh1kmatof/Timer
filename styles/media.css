@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+    .soat, .timer {
+        font-size: 3.5rem;
+        min-height: 120px;
+    }
+
+    .sw-ms {
+        font-size: 2rem;
+        width: 50px;
+    }
+
+    .time-display {
+        min-width: auto;
+    }
+
+    .btn-sw-main,
+    .btn-sw-reset,
+    .btn-soat,
+    .btn-timer {
+        padding: 10px 18px;
+        font-size: 0.9rem;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
